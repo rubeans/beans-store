@@ -1,3 +1,3 @@
-import pageLoad from "./components/page-load";
+import pageLoad from "./components/home.js";
 
 pageLoad()

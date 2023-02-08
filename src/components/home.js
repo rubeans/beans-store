@@ -1,6 +1,6 @@
 import beans from '../../img/beans.jpg'
 
-const pageLoad = () => {
+const home = () => {
     const h1 = document.createElement('h1')
     h1.textContent = "RuBeans"
     const img = document.createElement('img')
@@ -17,4 +17,4 @@ const pageLoad = () => {
     return content;
 }
 
-export default pageLoad;
+export default home;

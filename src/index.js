@@ -1,3 +1,4 @@
-import pageLoad from "./components/home.js";
+import home from "./components/home.js";
+import '../css/style.css'
 
-pageLoad()
+home()

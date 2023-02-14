@@ -630,7 +630,7 @@ var __webpack_exports__ = {};
 (() => {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _css_style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
-/* harmony import */ var _components_pageLoad_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(11);
+/* harmony import */ var _components_pageLoader_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(11);
 /* harmony import */ var _components_home_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(12);
 /* harmony import */ var _components_menu_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(13);
 /* harmony import */ var _components_contact_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(14);
@@ -640,7 +640,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-(0,_components_pageLoad_js__WEBPACK_IMPORTED_MODULE_1__["default"])()
+(0,_components_pageLoader_js__WEBPACK_IMPORTED_MODULE_1__["default"])()
 ;(0,_components_home_js__WEBPACK_IMPORTED_MODULE_2__["default"])()
 ;(0,_components_menu_js__WEBPACK_IMPORTED_MODULE_3__["default"])()
 ;(0,_components_contact_js__WEBPACK_IMPORTED_MODULE_4__["default"])()

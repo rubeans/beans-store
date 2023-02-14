@@ -465,7 +465,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 // import beans from '../../img/beans.jpg'
 
-const home = () => {
+const pageLoader = () => {
     const content = document.querySelector('#content')
     const tabContainer = document.createElement('div')
     const tabs = document.createElement('div')
@@ -474,25 +474,25 @@ const home = () => {
     content.appendChild(tabContainer)
     content.appendChild(tabs)
     // 
+    const home = document.createElement('button')
+    home.classList.add('tab-buttons')
+    home.dataset.tab = 'tab1'
+    home.textContent = 'Home'
     const menu = document.createElement('button')
     menu.classList.add('tab-buttons')
-    menu.dataset.tab = 'tab1'
+    menu.dataset.tab = 'tab2'
     menu.textContent = 'Menu'
-    const rate = document.createElement('button')
-    rate.classList.add('tab-buttons')
-    rate.dataset.tab = 'tab2'
-    rate.textContent = 'Avaliações'
     const contact = document.createElement('button')
     contact.classList.add('tab-buttons')
     contact.dataset.tab = 'tab3'
-    contact.textContent = 'Contato'
+    contact.textContent = 'Contact'
     // 
+    tabContainer.appendChild(home)
     tabContainer.appendChild(menu)
-    tabContainer.appendChild(rate)
     tabContainer.appendChild(contact)
 }
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (home);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (pageLoader);
 
 /***/ }),
 /* 12 */
@@ -502,16 +502,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-const menu = () => {
+const home = () => {
     const tabs = document.querySelector('.tabs')
     const div = document.createElement('div')
     div.id = 'tab1'
     div.classList.add('tab', 'active')
-    div.textContent = 'Menu'
+    div.textContent = 'HOME'
     tabs.appendChild(div)
 }
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (menu);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (home);
 
 /***/ }),
 /* 13 */
@@ -521,16 +521,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-const rating = () => {
+const menu = () => {
     const tabs = document.querySelector('.tabs')
     const div = document.createElement('div')
     div.id = 'tab2'
     div.classList.add('tab')
-    div.textContent = 'Rating'
+    div.textContent = 'MENU'
     tabs.appendChild(div)
 }
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (rating);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (menu);
 
 /***/ }),
 /* 14 */
@@ -545,7 +545,7 @@ const contact = () => {
     const div = document.createElement('div')
     div.id = 'tab3'
     div.classList.add('tab')
-    div.textContent = 'Contact'
+    div.textContent = 'CONTACT'
     tabs.appendChild(div)
 }
 
@@ -630,9 +630,9 @@ var __webpack_exports__ = {};
 (() => {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _css_style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
-/* harmony import */ var _components_home_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(11);
-/* harmony import */ var _components_menu_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(12);
-/* harmony import */ var _components_rating_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(13);
+/* harmony import */ var _components_pageLoad_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(11);
+/* harmony import */ var _components_home_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(12);
+/* harmony import */ var _components_menu_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(13);
 /* harmony import */ var _components_contact_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(14);
 
 
@@ -640,9 +640,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-(0,_components_home_js__WEBPACK_IMPORTED_MODULE_1__["default"])()
-;(0,_components_menu_js__WEBPACK_IMPORTED_MODULE_2__["default"])()
-;(0,_components_rating_js__WEBPACK_IMPORTED_MODULE_3__["default"])()
+(0,_components_pageLoad_js__WEBPACK_IMPORTED_MODULE_1__["default"])()
+;(0,_components_home_js__WEBPACK_IMPORTED_MODULE_2__["default"])()
+;(0,_components_menu_js__WEBPACK_IMPORTED_MODULE_3__["default"])()
 ;(0,_components_contact_js__WEBPACK_IMPORTED_MODULE_4__["default"])()
 })();
 

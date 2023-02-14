@@ -1,5 +1,3 @@
-// import beans from '../../img/beans.jpg'
-
 const pageLoader = () => {
     const content = document.querySelector('#content')
     const tabContainer = document.createElement('div')

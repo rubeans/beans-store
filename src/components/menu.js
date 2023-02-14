@@ -1,8 +1,8 @@
 const menu = () => {
-    const tabs = document.querySelector('.tabs')
+    const tabs = document.querySelector('.tab-contents')
     const div = document.createElement('div')
-    div.id = 'tab2'
-    div.classList.add('tab')
+    div.id = 'menu-content'
+    div.classList.add('tab-content')
     div.textContent = 'MENU'
     tabs.appendChild(div)
 }

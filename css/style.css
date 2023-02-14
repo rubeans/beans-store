@@ -7,15 +7,3 @@
 #content {
     height: 100vh;
 }
-
-.tab-buttons {
-    cursor: pointer;
-}
-
-.tab {
-    display: none;
-}
-
-.tab.active {
-    display: block;
-}

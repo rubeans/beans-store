@@ -350,7 +350,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "* {\n    box-sizing: border-box;\n    margin: 0;\n    padding: 0;\n}\n\n#content {\n    height: 100vh;\n}\n\n.tab-buttons {\n    cursor: pointer;\n}\n\n.tab {\n    display: none;\n}\n\n.tab.active {\n    display: block;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "* {\r\n    box-sizing: border-box;\r\n    margin: 0;\r\n    padding: 0;\r\n}\r\n\r\n#content {\r\n    height: 100vh;\r\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -469,22 +469,22 @@ const pageLoader = () => {
     const content = document.querySelector('#content')
     const tabContainer = document.createElement('div')
     const tabs = document.createElement('div')
-    tabContainer.classList.add('tab-container')
-    tabs.classList.add('tabs')
+    tabContainer.classList.add('tab-buttons')
+    tabs.classList.add('tab-contents')
     content.appendChild(tabContainer)
     content.appendChild(tabs)
     // 
     const home = document.createElement('button')
-    home.classList.add('tab-buttons')
-    home.dataset.tab = 'tab1'
+    home.id = 'home'
+    home.classList.add('tab-button', 'active')
     home.textContent = 'Home'
     const menu = document.createElement('button')
-    menu.classList.add('tab-buttons')
-    menu.dataset.tab = 'tab2'
+    menu.id = 'menu'
+    menu.classList.add('tab-button')
     menu.textContent = 'Menu'
     const contact = document.createElement('button')
-    contact.classList.add('tab-buttons')
-    contact.dataset.tab = 'tab3'
+    contact.id = 'contact'
+    contact.classList.add('tab-button')
     contact.textContent = 'Contact'
     // 
     tabContainer.appendChild(home)
@@ -503,10 +503,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 const home = () => {
-    const tabs = document.querySelector('.tabs')
+    const tabs = document.querySelector('.tab-contents')
     const div = document.createElement('div')
-    div.id = 'tab1'
-    div.classList.add('tab', 'active')
+    div.id = 'home-content'
+    div.classList.add('tab-content', 'active')
     div.textContent = 'HOME'
     tabs.appendChild(div)
 }
@@ -522,10 +522,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 const menu = () => {
-    const tabs = document.querySelector('.tabs')
+    const tabs = document.querySelector('.tab-contents')
     const div = document.createElement('div')
-    div.id = 'tab2'
-    div.classList.add('tab')
+    div.id = 'menu-content'
+    div.classList.add('tab-content')
     div.textContent = 'MENU'
     tabs.appendChild(div)
 }
@@ -541,10 +541,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 const contact = () => {
-    const tabs = document.querySelector('.tabs')
+    const tabs = document.querySelector('.tab-contents')
     const div = document.createElement('div')
-    div.id = 'tab3'
-    div.classList.add('tab')
+    div.id = 'contact-content'
+    div.classList.add('tab-content')
     div.textContent = 'CONTACT'
     tabs.appendChild(div)
 }
@@ -640,10 +640,43 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+// Load the page content and tabs
 (0,_components_pageLoader_js__WEBPACK_IMPORTED_MODULE_1__["default"])()
 ;(0,_components_home_js__WEBPACK_IMPORTED_MODULE_2__["default"])()
 ;(0,_components_menu_js__WEBPACK_IMPORTED_MODULE_3__["default"])()
 ;(0,_components_contact_js__WEBPACK_IMPORTED_MODULE_4__["default"])()
+
+// Tab switching logic
+function switchTab(tabId, event) {
+    // Get all the tabs and the content associated with them
+    const tabs = document.querySelectorAll('.tab-button');
+    const contents = document.querySelectorAll('.tab-content');
+
+    // Hide all the content associated with the tabs
+    contents.forEach((content) => {
+        content.style.display = 'none';
+    });
+
+    // Set the selected tab to active
+    tabs.forEach((tab) => {
+        tab.classList.remove('active');
+        if (tab.id === tabId) {
+            tab.classList.add('active');
+        }
+    });
+
+    // Show the content associated with the selected tab
+    const content = document.querySelector(`#${tabId}-content`);
+    content.style.display = 'block';
+}
+
+// Trigger the switchTab function when a tab is clicked.
+const tabs = document.querySelectorAll('.tab-button');
+tabs.forEach((tab) => {
+    tab.addEventListener('click', (event) => {
+        switchTab(tab.id, event);
+    });
+});
 })();
 
 /******/ })()

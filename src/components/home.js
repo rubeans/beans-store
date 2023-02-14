@@ -1,8 +1,8 @@
 const home = () => {
-    const tabs = document.querySelector('.tabs')
+    const tabs = document.querySelector('.tab-contents')
     const div = document.createElement('div')
-    div.id = 'tab1'
-    div.classList.add('tab', 'active')
+    div.id = 'home-content'
+    div.classList.add('tab-content', 'active')
     div.textContent = 'HOME'
     tabs.appendChild(div)
 }

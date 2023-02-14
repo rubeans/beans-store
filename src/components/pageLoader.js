@@ -4,22 +4,22 @@ const pageLoader = () => {
     const content = document.querySelector('#content')
     const tabContainer = document.createElement('div')
     const tabs = document.createElement('div')
-    tabContainer.classList.add('tab-container')
-    tabs.classList.add('tabs')
+    tabContainer.classList.add('tab-buttons')
+    tabs.classList.add('tab-contents')
     content.appendChild(tabContainer)
     content.appendChild(tabs)
     // 
     const home = document.createElement('button')
-    home.classList.add('tab-buttons')
-    home.dataset.tab = 'tab1'
+    home.id = 'home'
+    home.classList.add('tab-button', 'active')
     home.textContent = 'Home'
     const menu = document.createElement('button')
-    menu.classList.add('tab-buttons')
-    menu.dataset.tab = 'tab2'
+    menu.id = 'menu'
+    menu.classList.add('tab-button')
     menu.textContent = 'Menu'
     const contact = document.createElement('button')
-    contact.classList.add('tab-buttons')
-    contact.dataset.tab = 'tab3'
+    contact.id = 'contact'
+    contact.classList.add('tab-button')
     contact.textContent = 'Contact'
     // 
     tabContainer.appendChild(home)

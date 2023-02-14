@@ -1,10 +1,10 @@
-const contact = () => {
+const rating = () => {
     const tabs = document.querySelector('.tabs')
     const div = document.createElement('div')
-    div.id = 'tab3'
+    div.id = 'tab2'
     div.classList.add('tab')
-    div.textContent = 'Contact'
+    div.textContent = 'Rating'
     tabs.appendChild(div)
 }
 
-export default contact;
+export default rating;

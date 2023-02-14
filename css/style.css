@@ -5,19 +5,17 @@
 }
 
 #content {
-    background-color: brown;
-    color: white;
     height: 100vh;
 }
 
-h1 {
-    font-size: 64px;
+.tab-buttons {
+    cursor: pointer;
 }
 
-img {
-    border-radius: 10px;
+.tab {
+    display: none;
 }
 
-p {
-    font-size: 24px;
+.tab.active {
+    display: block;
 }

@@ -41,3 +41,9 @@ tabs.forEach((tab) => {
         switchTab(tab.id, event);
     });
 });
+
+// Load Home page by default
+window.onload = () => {
+    const loadHome = document.querySelectorAll('.tab-content')[0];
+    loadHome.style.display = 'block'
+}

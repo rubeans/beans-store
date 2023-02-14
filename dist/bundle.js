@@ -350,7 +350,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "* {\r\n    box-sizing: border-box;\r\n    margin: 0;\r\n    padding: 0;\r\n}\r\n\r\n#content {\r\n    height: 100vh;\r\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "* {\r\n    box-sizing: border-box;\r\n    margin: 0;\r\n    padding: 0;\r\n}\r\n\r\n#content {\r\n    height: 100vh;\r\n    text-align: center;\r\n}\r\n\r\n.tab-button{\r\n    cursor: pointer;\r\n    border: none;\r\n    padding: 10px;\r\n}\r\n\r\n.tab-content{\r\n    display: none;\r\n}\r\n.active{\r\n    background-color: grey;\r\n    color: white;\r\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -506,7 +506,7 @@ const home = () => {
     const tabs = document.querySelector('.tab-contents')
     const div = document.createElement('div')
     div.id = 'home-content'
-    div.classList.add('tab-content', 'active')
+    div.classList.add('tab-content')
     div.textContent = 'HOME'
     tabs.appendChild(div)
 }
@@ -677,6 +677,12 @@ tabs.forEach((tab) => {
         switchTab(tab.id, event);
     });
 });
+
+// Load Home page by default
+window.onload = () => {
+    const loadHome = document.querySelectorAll('.tab-content')[0];
+    loadHome.style.display = 'block'
+}
 })();
 
 /******/ })()

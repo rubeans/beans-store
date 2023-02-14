@@ -6,4 +6,19 @@
 
 #content {
     height: 100vh;
+    text-align: center;
+}
+
+.tab-button{
+    cursor: pointer;
+    border: none;
+    padding: 10px;
+}
+
+.tab-content{
+    display: none;
+}
+.active{
+    background-color: grey;
+    color: white;
 }

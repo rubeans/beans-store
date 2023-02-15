@@ -356,7 +356,7 @@ var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBP
 ___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Quicksand&display=swap);"]);
 var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_0___);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "* {\n    box-sizing: border-box;\n    margin: 0;\n    padding: 0;\n    font-family: 'Quicksand', sans-serif;\n}\n\nbody {\n    background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\n    background-size: cover;\n    background-repeat: no-repeat;\n}\n\n#content {\n    height: 100vh;\n    text-align: center;\n}\n\n.tab-button {\n    cursor: pointer;\n    border: none;\n    padding: 10px;\n    background-color: brown;\n    color: white;\n}\n\n.tab-content {\n    display: none;\n}\n\n.active {\n    background-color: grey;\n    color: white;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "* {\n    box-sizing: border-box;\n    margin: 0;\n    padding: 0;\n    font-family: 'Quicksand', sans-serif;\n}\n\nbody {\n    background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\n    background-size: cover;\n}\n\n#content {\n    height: 100vh;\n    text-align: center;\n}\n\n.tab-button {\n    cursor: pointer;\n    border: none;\n    padding: 10px;\n    background-color: brown;\n    color: white;\n}\n\n.tab-content {\n    display: none;\n}\n\n.active {\n    background-color: grey;\n    color: white;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -496,7 +496,7 @@ module.exports = function (url, options) {
 /* 12 */
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-module.exports = __webpack_require__.p + "dbdcade65b94da519ca4.jpg";
+module.exports = __webpack_require__.p + "d88007f37ceb7241ce24.jpg";
 
 /***/ }),
 /* 13 */
@@ -509,10 +509,13 @@ __webpack_require__.r(__webpack_exports__);
 const pageLoader = () => {
     // Containers
     const content = document.querySelector('#content')
+    const h1 = document.createElement('h1')
     const tabButtons = document.createElement('div')
     const tabs = document.createElement('div')
+    h1.textContent = 'RuBeans, the best beans out there!'
     tabButtons.classList.add('tab-buttons')
     tabs.classList.add('tab-contents')
+    content.append(h1)
     content.appendChild(tabButtons)
     content.appendChild(tabs)
     // Add buttons

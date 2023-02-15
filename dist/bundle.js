@@ -356,7 +356,7 @@ var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBP
 ___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Quicksand&display=swap);"]);
 var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_0___);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "* {\r\n    box-sizing: border-box;\r\n    margin: 0;\r\n    padding: 0;\r\n    font-family: 'Quicksand', sans-serif;\r\n}\r\n\r\nbody {\r\n    background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\r\n    background-size: cover;\r\n}\r\n\r\n#content {\r\n    height: 100vh;\r\n    text-align: center;\r\n}\r\n\r\n.tab-button {\r\n    cursor: pointer;\r\n    border: none;\r\n    padding: 10px;\r\n    background-color: brown;\r\n    color: white;\r\n}\r\n\r\n.tab-content {\r\n    display: none;\r\n}\r\n\r\n.active {\r\n    background-color: grey;\r\n    color: white;\r\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "* {\n    box-sizing: border-box;\n    margin: 0;\n    padding: 0;\n    font-family: 'Quicksand', sans-serif;\n}\n\nbody {\n    background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\n    background-size: cover;\n    background-repeat: no-repeat;\n}\n\n#content {\n    height: 100vh;\n    text-align: center;\n}\n\n.tab-button {\n    cursor: pointer;\n    border: none;\n    padding: 10px;\n    background-color: brown;\n    color: white;\n}\n\n.tab-content {\n    display: none;\n}\n\n.active {\n    background-color: grey;\n    color: white;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -507,14 +507,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 const pageLoader = () => {
+    // Containers
     const content = document.querySelector('#content')
-    const tabContainer = document.createElement('div')
+    const tabButtons = document.createElement('div')
     const tabs = document.createElement('div')
-    tabContainer.classList.add('tab-buttons')
+    tabButtons.classList.add('tab-buttons')
     tabs.classList.add('tab-contents')
-    content.appendChild(tabContainer)
+    content.appendChild(tabButtons)
     content.appendChild(tabs)
-    // 
+    // Add buttons
     const home = document.createElement('button')
     home.id = 'home'
     home.classList.add('tab-button', 'active')
@@ -527,10 +528,10 @@ const pageLoader = () => {
     contact.id = 'contact'
     contact.classList.add('tab-button')
     contact.textContent = 'Contact'
-    // 
-    tabContainer.appendChild(home)
-    tabContainer.appendChild(menu)
-    tabContainer.appendChild(contact)
+    // Put buttons inside tab-buttons container
+    tabButtons.appendChild(home)
+    tabButtons.appendChild(menu)
+    tabButtons.appendChild(contact)
 }
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (pageLoader);

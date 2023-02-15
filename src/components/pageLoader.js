@@ -1,12 +1,13 @@
 const pageLoader = () => {
+    // Containers
     const content = document.querySelector('#content')
-    const tabContainer = document.createElement('div')
+    const tabButtons = document.createElement('div')
     const tabs = document.createElement('div')
-    tabContainer.classList.add('tab-buttons')
+    tabButtons.classList.add('tab-buttons')
     tabs.classList.add('tab-contents')
-    content.appendChild(tabContainer)
+    content.appendChild(tabButtons)
     content.appendChild(tabs)
-    // 
+    // Add buttons
     const home = document.createElement('button')
     home.id = 'home'
     home.classList.add('tab-button', 'active')
@@ -19,10 +20,10 @@ const pageLoader = () => {
     contact.id = 'contact'
     contact.classList.add('tab-button')
     contact.textContent = 'Contact'
-    // 
-    tabContainer.appendChild(home)
-    tabContainer.appendChild(menu)
-    tabContainer.appendChild(contact)
+    // Put buttons inside tab-buttons container
+    tabButtons.appendChild(home)
+    tabButtons.appendChild(menu)
+    tabButtons.appendChild(contact)
 }
 
 export default pageLoader;

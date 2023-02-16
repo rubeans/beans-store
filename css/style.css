@@ -26,16 +26,18 @@
 .main-content {
     grid-area: main;
     height: 60vh;
+    background-color: brown;
 }
 
 .tab-buttons {
-    background-color: burlywood;
+    background-color: #deb887;
 }
 
 .tab-button {
     cursor: pointer;
     border: none;
     padding: 10px;
+    background-color: #deb887;
 }
 
 .tab-content {
@@ -43,5 +45,5 @@
 }
 
 .active {
-    background-color: grey;
+    background-color: brown;
 }

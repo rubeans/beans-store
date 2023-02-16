@@ -356,7 +356,7 @@ var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBP
 ___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Quicksand&display=swap);"]);
 var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_0___);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "* {\n    box-sizing: border-box;\n    margin: 0;\n    padding: 0;\n    font-family: 'Quicksand', sans-serif;\n}\n\n#content {\n    min-height: 100vh;\n    text-align: center;\n    display: grid;\n    grid-template-areas:\n        'header'\n        'main';\n}\n\n.header {\n    grid-area: header;\n    background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\n    background-size: cover;\n    height: 40vh;\n}\n\n.main-content {\n    grid-area: main;\n    height: 60vh;\n}\n\n.tab-button {\n    cursor: pointer;\n    border: none;\n    padding: 10px;\n    background-color: brown;\n}\n\n.tab-content {\n    display: none;\n}\n\n.active {\n    background-color: grey;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "* {\n    box-sizing: border-box;\n    margin: 0;\n    padding: 0;\n    font-family: 'Quicksand', sans-serif;\n}\n\n#content {\n    min-height: 100vh;\n    text-align: center;\n    display: grid;\n    grid-template-areas:\n        'header'\n        'main';\n}\n\n.header {\n    grid-area: header;\n    background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\n    background-size: cover;\n    height: 40vh;\n}\n\n.main-content {\n    grid-area: main;\n    height: 60vh;\n    background-color: brown;\n}\n\n.tab-buttons {\n    background-color: #deb887;\n}\n\n.tab-button {\n    cursor: pointer;\n    border: none;\n    padding: 10px;\n    background-color: #deb887;\n}\n\n.tab-content {\n    display: none;\n}\n\n.active {\n    background-color: brown;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -539,7 +539,7 @@ const header = () => {
     header.insertAdjacentHTML('beforeend', `
     <h1>Rubeans</h1>
     <p>The best beans out there!</p>
-`)
+    `)
     // Append element to the page
     content.appendChild(header)
 

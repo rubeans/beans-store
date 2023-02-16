@@ -1,14 +1,8 @@
 import '../css/style.css'
-import pageLoader from './components/pageLoader.js';
-import home from './components/home.js';
-import menu from './components/menu.js'
-import contact from './components/contact.js'
+import pageLoader from './components/loader/pageLoader.js';
 
 // Load the page content and tabs
 pageLoader()
-home()
-menu()
-contact()
 
 // Tab switching logic
 function switchTab(tabId, event) {
@@ -42,7 +36,7 @@ tabs.forEach((tab) => {
     });
 });
 
-// Load Home page by default
+// Only load Home tab by default
 window.onload = () => {
     const loadHome = document.querySelectorAll('.tab-content')[0];
     loadHome.style.display = 'block'

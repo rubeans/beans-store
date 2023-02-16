@@ -7,22 +7,35 @@
     font-family: 'Quicksand', sans-serif;
 }
 
-body {
-    background-image: url('../img/bgImg.jpg');
-    background-size: cover;
+#content {
+    min-height: 100vh;
+    text-align: center;
+    display: grid;
+    grid-template-areas:
+        'header'
+        'main';
 }
 
-#content {
-    height: 100vh;
-    text-align: center;
+.header {
+    grid-area: header;
+    background-image: url('../img/bgImg.jpg');
+    background-size: cover;
+    height: 40vh;
+}
+
+.main-content {
+    grid-area: main;
+    height: 60vh;
+}
+
+.tab-buttons {
+    background-color: burlywood;
 }
 
 .tab-button {
     cursor: pointer;
     border: none;
     padding: 10px;
-    background-color: brown;
-    color: white;
 }
 
 .tab-content {
@@ -31,5 +44,4 @@ body {
 
 .active {
     background-color: grey;
-    color: white;
 }

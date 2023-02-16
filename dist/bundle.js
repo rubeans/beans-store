@@ -356,7 +356,7 @@ var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBP
 ___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Quicksand&display=swap);"]);
 var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_0___);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "* {\n    box-sizing: border-box;\n    margin: 0;\n    padding: 0;\n    font-family: 'Quicksand', sans-serif;\n}\n\nbody {\n    background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\n    background-size: cover;\n}\n\n#content {\n    height: 100vh;\n    text-align: center;\n}\n\n.tab-button {\n    cursor: pointer;\n    border: none;\n    padding: 10px;\n    background-color: brown;\n    color: white;\n}\n\n.tab-content {\n    display: none;\n}\n\n.active {\n    background-color: grey;\n    color: white;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "* {\n    box-sizing: border-box;\n    margin: 0;\n    padding: 0;\n    font-family: 'Quicksand', sans-serif;\n}\n\n#content {\n    min-height: 100vh;\n    text-align: center;\n    display: grid;\n    grid-template-areas:\n        'header'\n        'main';\n}\n\n.header {\n    grid-area: header;\n    background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\n    background-size: cover;\n    height: 40vh;\n}\n\n.main-content {\n    grid-area: main;\n    height: 60vh;\n}\n\n.tab-button {\n    cursor: pointer;\n    border: none;\n    padding: 10px;\n    background-color: brown;\n}\n\n.tab-content {\n    display: none;\n}\n\n.active {\n    background-color: grey;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -496,7 +496,7 @@ module.exports = function (url, options) {
 /* 12 */
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-module.exports = __webpack_require__.p + "d88007f37ceb7241ce24.jpg";
+module.exports = __webpack_require__.p + "acc7d5a08eb04cf9b589.jpg";
 
 /***/ }),
 /* 13 */
@@ -506,35 +506,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+/* harmony import */ var _containers_header_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(14);
+/* harmony import */ var _containers_main_content_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(15);
+
+
+
 const pageLoader = () => {
-    // Containers
-    const content = document.querySelector('#content')
-    const h1 = document.createElement('h1')
-    const tabButtons = document.createElement('div')
-    const tabs = document.createElement('div')
-    h1.textContent = 'RuBeans, the best beans out there!'
-    tabButtons.classList.add('tab-buttons')
-    tabs.classList.add('tab-contents')
-    content.append(h1)
-    content.appendChild(tabButtons)
-    content.appendChild(tabs)
-    // Add buttons
-    const home = document.createElement('button')
-    home.id = 'home'
-    home.classList.add('tab-button', 'active')
-    home.textContent = 'Home'
-    const menu = document.createElement('button')
-    menu.id = 'menu'
-    menu.classList.add('tab-button')
-    menu.textContent = 'Menu'
-    const contact = document.createElement('button')
-    contact.id = 'contact'
-    contact.classList.add('tab-button')
-    contact.textContent = 'Contact'
-    // Put buttons inside tab-buttons container
-    tabButtons.appendChild(home)
-    tabButtons.appendChild(menu)
-    tabButtons.appendChild(contact)
+    // Header
+    (0,_containers_header_js__WEBPACK_IMPORTED_MODULE_0__["default"])()
+
+    // Main Content
+    ;(0,_containers_main_content_js__WEBPACK_IMPORTED_MODULE_1__["default"])()
 }
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (pageLoader);
@@ -547,16 +529,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-const home = () => {
-    const tabs = document.querySelector('.tab-contents')
-    const div = document.createElement('div')
-    div.id = 'home-content'
-    div.classList.add('tab-content')
-    div.textContent = 'HOME'
-    tabs.appendChild(div)
+const header = () => {
+    // Create a new element that will be appended to the content
+    const content = document.querySelector('#content')
+    const header = document.createElement('header')
+    header.classList.add('header')
+
+    // The headerwill be generated here
+    header.insertAdjacentHTML('beforeend', `
+    <h1>Rubeans</h1>
+    <p>The best beans out there!</p>
+`)
+    // Append element to the page
+    content.appendChild(header)
+
 }
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (home);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (header);
 
 /***/ }),
 /* 15 */
@@ -566,35 +555,45 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-const menu = () => {
-    const tabs = document.querySelector('.tab-contents')
-    const div = document.createElement('div')
-    div.id = 'menu-content'
-    div.classList.add('tab-content')
-    div.textContent = 'MENU'
-    tabs.appendChild(div)
+const mainContent = () => {
+    // Declare existing html element
+    const content = document.querySelector('#content')
+
+    // Create a new element that will be appended to the content
+    const mainContainer = document.createElement('main')
+    mainContainer.classList.add('main-content')
+
+    // Create buttons to redirected to each content of the page
+    const tabButtons = document.createElement('div')
+    tabButtons.classList.add('tab-buttons')
+    tabButtons.insertAdjacentHTML('beforeend', `
+        <button id="home" class="tab-button active">Home</button>
+        <button id="menu" class="tab-button">Menu</button>
+        <button id="contact" class="tab-button">Contact Us</button>
+    `)
+
+    // The main content will be generated here
+    const tabs = document.createElement('div')
+    tabs.classList.add('tab-contents')
+    tabs.insertAdjacentHTML('beforeend', ` 
+        <div id="home-content" class="tab-content">
+            <h1>Home</h1>
+        </div>
+        <div id="menu-content" class="tab-content">
+            <h1>Menu</h1>
+        </div>
+        <div id="contact-content" class="tab-content">
+            <h1>Contact</h1>
+        </div>
+    `)
+
+    // Append elements to the page
+    content.appendChild(mainContainer)
+    mainContainer.appendChild(tabButtons)
+    mainContainer.appendChild(tabs)
 }
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (menu);
-
-/***/ }),
-/* 16 */
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-const contact = () => {
-    const tabs = document.querySelector('.tab-contents')
-    const div = document.createElement('div')
-    div.id = 'contact-content'
-    div.classList.add('tab-content')
-    div.textContent = 'CONTACT'
-    tabs.appendChild(div)
-}
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (contact);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (mainContent);
 
 /***/ })
 /******/ 	]);
@@ -736,21 +735,12 @@ var __webpack_exports__ = {};
 (() => {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _css_style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
-/* harmony import */ var _components_pageLoader_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(13);
-/* harmony import */ var _components_home_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(14);
-/* harmony import */ var _components_menu_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(15);
-/* harmony import */ var _components_contact_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(16);
-
-
-
+/* harmony import */ var _components_loader_pageLoader_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(13);
 
 
 
 // Load the page content and tabs
-(0,_components_pageLoader_js__WEBPACK_IMPORTED_MODULE_1__["default"])()
-;(0,_components_home_js__WEBPACK_IMPORTED_MODULE_2__["default"])()
-;(0,_components_menu_js__WEBPACK_IMPORTED_MODULE_3__["default"])()
-;(0,_components_contact_js__WEBPACK_IMPORTED_MODULE_4__["default"])()
+(0,_components_loader_pageLoader_js__WEBPACK_IMPORTED_MODULE_1__["default"])()
 
 // Tab switching logic
 function switchTab(tabId, event) {
@@ -784,7 +774,7 @@ tabs.forEach((tab) => {
     });
 });
 
-// Load Home page by default
+// Only load Home tab by default
 window.onload = () => {
     const loadHome = document.querySelectorAll('.tab-content')[0];
     loadHome.style.display = 'block'

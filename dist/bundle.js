@@ -356,7 +356,7 @@ var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBP
 ___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Quicksand&display=swap);"]);
 var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_0___);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "/* Global settings */\r\n\r\n* {\r\n    box-sizing: border-box;\r\n    margin: 0;\r\n    padding: 0;\r\n    font-family: 'Quicksand', sans-serif;\r\n}\r\n\r\n/* Content container */\r\n#content {\r\n    min-height: 100vh;\r\n    text-align: center;\r\n    display: grid;\r\n    grid-template-areas:\r\n        'header'\r\n        'main'\r\n        'footer';\r\n    color: #fff;\r\n    font-weight: 600;\r\n}\r\n\r\n/* Header */\r\n.header {\r\n    grid-area: header;\r\n    background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\r\n    background-size: cover;\r\n    height: 35vh;\r\n    display: flex;\r\n    flex-direction: column;\r\n    justify-content: center;\r\n    gap: 1rem;\r\n}\r\n\r\n.header h1 {\r\n    font-size: 4.5rem;\r\n}\r\n\r\n.header a {\r\n    text-decoration: none;\r\n    color: #fff;\r\n}\r\n\r\n.header a:hover {\r\n    background-color: #1e0d0145;\r\n    border-radius: 20px;\r\n    padding: 15px;\r\n}\r\n\r\n.header .beans-txt {\r\n    text-decoration: underline;\r\n}\r\n\r\n.header p {\r\n    font-size: 2rem;\r\n}\r\n\r\n/* Main content */\r\n.main-content {\r\n    grid-area: main;\r\n    height: 65vh;\r\n    background-color: #1e0d01;\r\n}\r\n\r\n.tab-buttons {\r\n    background-color: #d55c0c;\r\n}\r\n\r\n.tab-button {\r\n    cursor: pointer;\r\n    border: none;\r\n    padding: 20px;\r\n    background-color: #d55c0c;\r\n    color: #fff;\r\n    font-size: 1.25rem;\r\n    font-weight: 600;\r\n    border-radius: 40px 40px 0 0;\r\n}\r\n\r\n.tab-button:hover {\r\n    background-color: #1e0d01;\r\n}\r\n\r\n.tab-content {\r\n    display: none;\r\n}\r\n\r\n.active {\r\n    background-color: #1e0d01;\r\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "/* Global settings */\n\n* {\n    box-sizing: border-box;\n    margin: 0;\n    padding: 0;\n    font-family: 'Quicksand', sans-serif;\n}\n\n/* Content container */\n#content {\n    min-height: 100vh;\n    text-align: center;\n    display: grid;\n    grid-template-areas:\n        'header'\n        'main'\n        'footer';\n    color: #fff;\n    font-weight: 600;\n}\n\n/* Header */\n.header {\n    grid-area: header;\n    background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\n    background-size: cover;\n    height: 35vh;\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    gap: 1rem;\n}\n\n.header h1 {\n    font-size: 4.5rem;\n}\n\n.header a {\n    text-decoration: none;\n    color: #fff;\n}\n\n.header a:hover {\n    background-color: #1e0d0145;\n    border-radius: 20px;\n    padding: 15px;\n}\n\n.header .beans-txt {\n    text-decoration: underline;\n}\n\n.header p {\n    font-size: 2rem;\n}\n\n/* Main content */\n.main-content {\n    grid-area: main;\n    height: 65vh;\n    background-color: #1e0d01;\n    display: flex;\n    flex-direction: column;\n}\n\n.tab-buttons {\n    background-color: #d55c0c;\n}\n\n.tab-buttons .active {\n    background-color: #1e0d01;\n}\n\n.tab-button {\n    cursor: pointer;\n    border: none;\n    padding: 20px;\n    background-color: #d55c0c;\n    color: #fff;\n    font-size: 1.25rem;\n    font-weight: 600;\n    border-radius: 40px 40px 0 0;\n}\n\n.tab-button:hover {\n    background-color: #1e0d01;\n}\n\n.tab-contents {\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-self: center;\n    width: 50vw;\n    height: 100vh;\n}\n\n.tab-content {\n    display: none;\n}\n\n.container-content {\n    display: flex;\n    flex-direction: column;\n    gap: 2rem;\n}\n\n.container-content .light-font {\n    font-weight: 100;\n}\n\n.container-content ul {\n    list-style: none;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -577,13 +577,43 @@ const mainContent = () => {
     tabs.classList.add('tab-contents')
     tabs.insertAdjacentHTML('beforeend', ` 
         <div id="home-content" class="tab-content">
-            <h1>Home</h1>
+            <div class="container-content">
+                <div class="about">
+                    <h2 class="about-content">RuBeans is fictional bean's focus restaurant made by Rubens Guilherme for study purpose. This project was made along with The Odin Project using a tool called Webpack.</h2>
+                </div>
+                <div class="hours">
+                    <h2 class="home-heading">Hours</h2>
+                    <div class="hours-content light-font">
+                    <ul class="hours-list">
+                        <li class="hour-list">Monday: 11:30 AM - 10:00 PM</li>
+                        <li class="hour-list">Tuesday: 11:30 AM - 10:00 PM</li>
+                        <li class="hour-list">Wednesday: 11:30 AM - 10:00 PM</li>
+                        <li class="hour-list">Thursday: 11:30 AM - 10:00 PM</li>
+                        <li class="hour-list">Friday: 11:30 AM - 10:00 PM</li>
+                        <li class="hour-list">Saturday: 11:30 AM - 12:00 AM</li>
+                        <li class="hour-list">Sunday: 11:30 AM - 12:00 AM</li>
+                    </ul>
+                    </div>
+                </div>
+                <div class="location">
+                    <h2 class="home-heading">Location</h2>
+                    <div class="location-content light-font">
+                        <p>Duque de Caxias, Rio De Janeiro - Brazil</p>
+                    </div>
+                </div>
+            </div>
         </div>
+
         <div id="menu-content" class="tab-content">
-            <h1>Menu</h1>
+            <div class="container-content light-font">
+                <h1>Menu</h1>
+            </div>
         </div>
+
         <div id="contact-content" class="tab-content">
-            <h1>Contact</h1>
+            <div class="container-content">
+                <h1>Contact</h1>
+            </div>
         </div>
     `)
 

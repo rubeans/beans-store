@@ -61,10 +61,16 @@
     grid-area: main;
     height: 65vh;
     background-color: #1e0d01;
+    display: flex;
+    flex-direction: column;
 }
 
 .tab-buttons {
     background-color: #d55c0c;
+}
+
+.tab-buttons .active {
+    background-color: #1e0d01;
 }
 
 .tab-button {
@@ -82,10 +88,29 @@
     background-color: #1e0d01;
 }
 
+.tab-contents {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    width: 50vw;
+    height: 100vh;
+}
+
 .tab-content {
     display: none;
 }
 
-.active {
-    background-color: #1e0d01;
+.container-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.container-content .light-font {
+    font-weight: 100;
+}
+
+.container-content ul {
+    list-style: none;
 }

@@ -605,7 +605,7 @@ const mainContent = () => {
         </div>
 
         <div id="menu-content" class="tab-content">
-            <div class="container-content light-font">
+            <div class="container-content">
                 <h1>Menu</h1>
             </div>
         </div>

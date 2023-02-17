@@ -22,7 +22,7 @@ const mainContent = () => {
         <div id="home-content" class="tab-content">
             <div class="container-content">
                 <div class="about">
-                    <h2 class="about-content">RuBeans is fictional bean's focus restaurant made by Rubens Guilherme for study purpose. This project was made along with The Odin Project using a tool called Webpack.</h2>
+                    <h2 class="about-content">RuBeans is a fictional bean's focus restaurant made by Rubens Guilherme for study purpose. This project was made along with The Odin Project using a tool called Webpack.</h2>
                 </div>
                 <div class="hours">
                     <h2 class="home-heading">Hours</h2>

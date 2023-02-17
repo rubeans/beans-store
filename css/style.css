@@ -1,3 +1,4 @@
+/* Global settings */
 @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
 
 * {
@@ -7,17 +8,20 @@
     font-family: 'Quicksand', sans-serif;
 }
 
+/* Content container */
 #content {
     min-height: 100vh;
     text-align: center;
     display: grid;
     grid-template-areas:
         'header'
-        'main';
+        'main'
+        'footer';
     color: #fff;
     font-weight: 600;
 }
 
+/* Header */
 .header {
     grid-area: header;
     background-image: url('../img/bgImg.jpg');
@@ -29,18 +33,30 @@
     gap: 1rem;
 }
 
-.header h1{
+.header h1 {
     font-size: 4.5rem;
 }
 
-.header .beans-txt{
+.header a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.header a:hover {
+    background-color: #1e0d0145;
+    border-radius: 20px;
+    padding: 15px;
+}
+
+.header .beans-txt {
     text-decoration: underline;
 }
 
-.header p{
+.header p {
     font-size: 2rem;
 }
 
+/* Main content */
 .main-content {
     grid-area: main;
     height: 65vh;
@@ -62,7 +78,7 @@
     border-radius: 40px 40px 0 0;
 }
 
-.tab-button:hover{
+.tab-button:hover {
     background-color: #1e0d01;
 }
 

@@ -4,11 +4,12 @@ const header = () => {
     const header = document.createElement('header')
     header.classList.add('header')
 
-    // The headerwill be generated here
+    // The header will be generated here
     header.insertAdjacentHTML('beforeend', `
-    <h1>Rubeans</h1>
+    <h1>Ru<span class='beans-txt'>Beans</span></h1>
     <p>The best beans out there!</p>
     `)
+
     // Append element to the page
     content.appendChild(header)
 

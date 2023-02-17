@@ -356,7 +356,7 @@ var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBP
 ___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Quicksand&display=swap);"]);
 var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_0___);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "* {\n    box-sizing: border-box;\n    margin: 0;\n    padding: 0;\n    font-family: 'Quicksand', sans-serif;\n}\n\n#content {\n    min-height: 100vh;\n    text-align: center;\n    display: grid;\n    grid-template-areas:\n        'header'\n        'main';\n}\n\n.header {\n    grid-area: header;\n    background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\n    background-size: cover;\n    height: 40vh;\n}\n\n.main-content {\n    grid-area: main;\n    height: 60vh;\n    background-color: brown;\n}\n\n.tab-buttons {\n    background-color: #deb887;\n}\n\n.tab-button {\n    cursor: pointer;\n    border: none;\n    padding: 10px;\n    background-color: #deb887;\n}\n\n.tab-content {\n    display: none;\n}\n\n.active {\n    background-color: brown;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "* {\r\n    box-sizing: border-box;\r\n    margin: 0;\r\n    padding: 0;\r\n    font-family: 'Quicksand', sans-serif;\r\n}\r\n\r\n#content {\r\n    min-height: 100vh;\r\n    text-align: center;\r\n    display: grid;\r\n    grid-template-areas:\r\n        'header'\r\n        'main';\r\n    color: #fff;\r\n    font-weight: 600;\r\n}\r\n\r\n.header {\r\n    grid-area: header;\r\n    background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\r\n    background-size: cover;\r\n    height: 35vh;\r\n    display: flex;\r\n    flex-direction: column;\r\n    justify-content: center;\r\n    gap: 1rem;\r\n}\r\n\r\n.header h1{\r\n    font-size: 4.5rem;\r\n}\r\n\r\n.header .beans-txt{\r\n    text-decoration: underline;\r\n}\r\n\r\n.header p{\r\n    font-size: 2rem;\r\n}\r\n\r\n.main-content {\r\n    grid-area: main;\r\n    height: 65vh;\r\n    background-color: #1e0d01;\r\n}\r\n\r\n.tab-buttons {\r\n    background-color: #d55c0c;\r\n}\r\n\r\n.tab-button {\r\n    cursor: pointer;\r\n    border: none;\r\n    padding: 20px;\r\n    background-color: #d55c0c;\r\n    color: #fff;\r\n    font-size: 1.25rem;\r\n    font-weight: 600;\r\n    border-radius: 40px 40px 0 0;\r\n}\r\n\r\n.tab-button:hover{\r\n    background-color: #1e0d01;\r\n}\r\n\r\n.tab-content {\r\n    display: none;\r\n}\r\n\r\n.active {\r\n    background-color: #1e0d01;\r\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -535,11 +535,12 @@ const header = () => {
     const header = document.createElement('header')
     header.classList.add('header')
 
-    // The headerwill be generated here
+    // The header will be generated here
     header.insertAdjacentHTML('beforeend', `
-    <h1>Rubeans</h1>
+    <h1>Ru<span class='beans-txt'>Beans</span></h1>
     <p>The best beans out there!</p>
     `)
+
     // Append element to the page
     content.appendChild(header)
 

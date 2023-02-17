@@ -14,30 +14,56 @@
     grid-template-areas:
         'header'
         'main';
+    color: #fff;
+    font-weight: 600;
 }
 
 .header {
     grid-area: header;
     background-image: url('../img/bgImg.jpg');
     background-size: cover;
-    height: 40vh;
+    height: 35vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.header h1{
+    font-size: 4.5rem;
+}
+
+.header .beans-txt{
+    text-decoration: underline;
+}
+
+.header p{
+    font-size: 2rem;
 }
 
 .main-content {
     grid-area: main;
-    height: 60vh;
-    background-color: brown;
+    height: 65vh;
+    background-color: #1e0d01;
 }
 
 .tab-buttons {
-    background-color: #deb887;
+    background-color: #d55c0c;
 }
 
 .tab-button {
     cursor: pointer;
     border: none;
-    padding: 10px;
-    background-color: #deb887;
+    padding: 20px;
+    background-color: #d55c0c;
+    color: #fff;
+    font-size: 1.25rem;
+    font-weight: 600;
+    border-radius: 40px 40px 0 0;
+}
+
+.tab-button:hover{
+    background-color: #1e0d01;
 }
 
 .tab-content {
@@ -45,5 +71,5 @@
 }
 
 .active {
-    background-color: brown;
+    background-color: #1e0d01;
 }

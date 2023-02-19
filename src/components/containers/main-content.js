@@ -22,10 +22,10 @@ const mainContent = () => {
         <div id="home-content" class="tab-content">
             <div class="container-content">
                 <div class="about">
-                    <h2 class="about-content">RuBeans is a fictional bean's focus restaurant made by Rubens Guilherme for study purpose. This project was made along with The Odin Project using a tool called Webpack.</h2>
+                    <h2 class="about-heading">RuBeans is a fictional bean's focus restaurant made by Rubens Guilherme for study purpose. This project was made along with The Odin Project using a tool called Webpack.</h2>
                 </div>
                 <div class="hours">
-                    <h2 class="home-heading">Hours</h2>
+                    <h2 class="heading">Hours</h2>
                     <div class="hours-content light-font">
                     <ul class="hours-list">
                         <li class="hour-list">Monday: 11:30 AM - 10:00 PM</li>
@@ -39,7 +39,7 @@ const mainContent = () => {
                     </div>
                 </div>
                 <div class="location">
-                    <h2 class="home-heading">Location</h2>
+                    <h2 class="heading">Location</h2>
                     <div class="location-content light-font">
                         <p>Duque de Caxias, Rio De Janeiro - Brazil</p>
                     </div>

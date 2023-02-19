@@ -21,20 +21,17 @@ const mainContent = () => {
     tabs.insertAdjacentHTML('beforeend', ` 
         <div id="home-content" class="tab-content">
             <div class="container-content">
-                <div class="about">
-                    <h2 class="about-heading">RuBeans is a fictional bean's focus restaurant made by Rubens Guilherme for study purpose. This project was made along with The Odin Project using a tool called Webpack.</h2>
-                </div>
                 <div class="hours">
                     <h2 class="heading">Hours</h2>
                     <div class="hours-content light-font">
                     <ul class="hours-list">
+                        <li class="hour-list">Sunday: 11:30 AM - 12:00 AM</li>
                         <li class="hour-list">Monday: 11:30 AM - 10:00 PM</li>
                         <li class="hour-list">Tuesday: 11:30 AM - 10:00 PM</li>
                         <li class="hour-list">Wednesday: 11:30 AM - 10:00 PM</li>
                         <li class="hour-list">Thursday: 11:30 AM - 10:00 PM</li>
                         <li class="hour-list">Friday: 11:30 AM - 10:00 PM</li>
                         <li class="hour-list">Saturday: 11:30 AM - 12:00 AM</li>
-                        <li class="hour-list">Sunday: 11:30 AM - 12:00 AM</li>
                     </ul>
                     </div>
                 </div>
@@ -43,6 +40,9 @@ const mainContent = () => {
                     <div class="location-content light-font">
                         <p>Duque de Caxias, Rio De Janeiro - Brazil</p>
                     </div>
+                </div>
+                <div class="about">
+                    <h2 class="heading">Ru<span class='beans-txt'>Beans</span> is a fictional bean's focus restaurant made by <a href="https://github.com/rubeans" target="_blank">Rubens Guilherme</a>. This project was made along with The Odin Project using a tool called Webpack.</h2>
                 </div>
             </div>
         </div>

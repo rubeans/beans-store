@@ -6,7 +6,7 @@ const header = () => {
 
     // The header will be generated here
     header.insertAdjacentHTML('beforeend', `
-    <h1 class="header-h1"><a href='https://github.com/rubeans'>Ru<span class='beans-txt'>Beans</span></a></h1>
+    <h1 class="header-h1">Ru<span class='beans-txt'>Beans</span></h1>
     <p class="header-p light-font">The best beans out there!</p>
     `)
 

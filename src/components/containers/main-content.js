@@ -25,13 +25,13 @@ const mainContent = () => {
                     <h2 class="heading">Hours</h2>
                     <div class="hours-content light-font">
                     <ul class="hours-list">
-                        <li class="hour-list">Sunday: 11:30 AM - 12:00 AM</li>
+                        <li class="hour-list">Sunday: 11:30 AM - 11:30 AM</li>
                         <li class="hour-list">Monday: 11:30 AM - 10:00 PM</li>
                         <li class="hour-list">Tuesday: 11:30 AM - 10:00 PM</li>
                         <li class="hour-list">Wednesday: 11:30 AM - 10:00 PM</li>
                         <li class="hour-list">Thursday: 11:30 AM - 10:00 PM</li>
                         <li class="hour-list">Friday: 11:30 AM - 10:00 PM</li>
-                        <li class="hour-list">Saturday: 11:30 AM - 12:00 AM</li>
+                        <li class="hour-list">Saturday: 11:30 AM - 11:30 AM</li>
                     </ul>
                     </div>
                 </div>
@@ -49,7 +49,50 @@ const mainContent = () => {
 
         <div id="menu-content" class="tab-content">
             <div class="container-content">
-                <h1>Menu</h1>
+                <div class="dishes-grid">
+                    <div class="dish">
+                        <div class="img-container">
+                            <img class="food-img" src="https://img.freepik.com/fotos-premium/feijoada-uma-comida-tipica-brasileira_434193-226.jpg?w=2000"/>
+                        </div>
+                        <div class="dish-content">
+                            <div class="price">
+                                <p class="dish-price light-font">$20</p>
+                            </div>
+                            <div class="dish-description">
+                                <h1 class="dish-name">Feijoda</h1>
+                                <p class="dish-p light-font">It consists of a bean stew, usually with meat, and almost always accompanied by rice.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dish">
+                        <div class="img-container">
+                            <img class="food-img" src="https://img.freepik.com/fotos-premium/feijoada-uma-comida-tipica-brasileira_434193-226.jpg?w=2000"/>
+                        </div>
+                        <div class="dish-content">
+                            <div class="price">
+                                <p class="dish-price light-font">$20</p>
+                            </div>
+                            <div class="dish-content">
+                                <h1 class="dish-name">Feijoda</h1>
+                                <p class="dish-description light-font">It consists of a bean stew, usually with meat, and almost always accompanied by rice.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dish">
+                        <div class="img-container">
+                            <img class="food-img" src="https://img.freepik.com/fotos-premium/feijoada-uma-comida-tipica-brasileira_434193-226.jpg?w=2000"/>
+                        </div>
+                        <div class="dish-content">
+                            <div class="price">
+                                <p class="dish-price light-font">$20</p>
+                            </div>
+                            <div class="dish-content">
+                                <h1 class="dish-name">Feijoda</h1>
+                                <p class="dish-description light-font">It consists of a bean stew, usually with meat, and almost always accompanied by rice.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 

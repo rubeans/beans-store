@@ -114,3 +114,43 @@
 .container-content ul {
     list-style: none;
 }
+
+.container-content img {
+    width: 25vw;
+    border-radius: 10px;
+}
+
+.dishes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(900px, 1fr));
+    row-gap: 8rem;
+}
+
+.dish {
+    display: flex;
+    gap: 1rem;
+}
+
+.img-container{
+    display: flex;
+    align-items: center;
+}
+
+.dish-content{
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.dish-name {
+    font-size: 2.5rem;
+}
+
+.dish-p{
+    font-size: 1.5rem;
+}
+
+.dish-price {
+    font-size: 2rem;
+}

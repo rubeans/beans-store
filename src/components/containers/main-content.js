@@ -25,13 +25,13 @@ const mainContent = () => {
                     <h1 class="heading">Hours</h1>
                     <div class="hours-content light-font">
                     <ul class="hours-list">
-                        <li class="hour-list">Sunday: 11:30 AM - 11:30 AM</li>
+                        <li class="hour-list">Sunday: 11:30 AM - 11:30 PM</li>
                         <li class="hour-list">Monday: 11:30 AM - 10:00 PM</li>
                         <li class="hour-list">Tuesday: 11:30 AM - 10:00 PM</li>
                         <li class="hour-list">Wednesday: 11:30 AM - 10:00 PM</li>
                         <li class="hour-list">Thursday: 11:30 AM - 10:00 PM</li>
                         <li class="hour-list">Friday: 11:30 AM - 10:00 PM</li>
-                        <li class="hour-list">Saturday: 11:30 AM - 11:30 AM</li>
+                        <li class="hour-list">Saturday: 11:30 AM - 11:30 PM</li>
                     </ul>
                     </div>
                 </div>

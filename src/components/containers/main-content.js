@@ -38,7 +38,7 @@ const mainContent = () => {
                 <div class="location">
                     <h1 class="heading">Location</h1>
                     <div class="location-content light-font">
-                        <p>Duque de Caxias, Rio De Janeiro - Brazil</p>
+                        <p>Rio De Janeiro - Brazil</p>
                     </div>
                 </div>
                 <div class="about">
@@ -90,7 +90,12 @@ const mainContent = () => {
 
         <div id="contact-content" class="tab-content">
             <div class="container-content">
-                <h1>Contact</h1>
+                <form class="form">
+                    <label class="label">Full Name<input type="text" class="input" required></label>
+                    <label class="label">E-Mail<input type="email" class="input required"></label>
+                    <label class="label">Message<input type="text" class="input" required></label>
+                    <button type="submit" class="msg-btn">Send</button>
+                </form>
             </div>
         </div>
     `)

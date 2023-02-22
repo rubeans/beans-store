@@ -97,8 +97,8 @@
     display: flex;
     gap: 6rem;
     flex-direction: column;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
 }
 
 .container-content .heading {
@@ -120,7 +120,7 @@
 
 /* Menu */
 .container-content img {
-    width: 45vw;
+    width: 40vw;
     min-width: 300px;
     border-radius: 10px;
 }
